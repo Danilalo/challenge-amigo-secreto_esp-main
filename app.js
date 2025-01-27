@@ -13,6 +13,14 @@ function agregarAmigo() {
     {
         amigos.push(amigo); //agregamos el amigo al array
         limpiarInput() //limpiamos el input
+        let lista = document.getElementById("listaAmigos"); // Selección por id
+        lista.innerHTML = ""; //limpiamos la lista
+        for (let i = 0; i < amigos.length; i++) {
+            let li = document.createElement("li"); // Crear elemento <li>
+            li.textContent = amigos[i]; // Asignar el nombre del amigo como texto
+            lista.appendChild(li); // Agregar el <li> a la lista
+        }
+
     }
     
 }
