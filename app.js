@@ -5,5 +5,12 @@ let amigos = []; //creamos un array vacio para almacenar los amigos
 function agregarAmigo() {
 
     let amigo=document.getElementById("amigo").value; //obtenemos el valor del input mediente el Id amigo
-    amigos.push(amigo); //agregamos el amigo al array
+    if(amigo==""){ //si el input esta vacio
+        alert("Ingrese un amigo"); //mostramos un alerta
+        return; //retornamos
+    }else
+    {
+        amigos.push(amigo); //agregamos el amigo al array
+    }
+    
 }
