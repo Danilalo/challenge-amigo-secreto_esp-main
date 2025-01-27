@@ -27,7 +27,8 @@ function agregarAmigo() {
     
 }
 
-function sortearAmigo(){
+function sortearAmigo(){ //creamos una función sortearAmigo
+
 if(amigos.length<2){ //si la cantidad de amigos es menor a 2
     alert("Ingrese al menos 2 amigos"); //mostramos un alerta
     return; //retornamos
@@ -35,8 +36,10 @@ if(amigos.length<2){ //si la cantidad de amigos es menor a 2
 else
 {
 let numerorandom=Math.floor(Math.random() * amigos.length); //generamos un numero random
-console.log("numoer:", numerorandom);
 let amigoSecreto=amigos[numerorandom]; //seleccionamos un amigo secreto
+let lista = document.getElementById("listaAmigos"); // Selección por id de la lista de amigos se hace la asignación a la variable lista desde html
+lista.innerHTML = `Feiciteciones el amigo secreto es: ${amigoSecreto}`; //limpiamos la lista
+
 }
 
 
